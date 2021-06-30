@@ -1,0 +1,63 @@
+@import "../../style/main.scss";
+  
+.section-about {
+    background: linear-gradient(-45deg,#b005ff,#01d2ff);
+    padding: 10rem 0;
+    min-height: 90vh;
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
+    .row{
+        color: $color-white;
+    }
+}
+
+.section-features {
+    padding: 10rem 0;
+    background-color: $color-grey-light-1;
+    // background-size: cover;
+    margin-top: -15vh;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+    .parag {   
+        padding-top: 1rem; 
+        max-width: 26vw;
+        margin: auto;
+        @include respond(tab-port) {
+            max-width: 70vw;
+        }
+        @include respond(mobile-port) {
+            max-width: 90vw;
+        }
+    }
+    .features-content{
+        padding-top: 2.5rem;
+        min-height: 35vh;
+        color: $color-white;
+        background: linear-gradient(-45deg,#b005ff,#01d2ff);
+        // background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+        animation-direction: normal;
+        // position: relative;
+        //,#b005ff,#01d2ff
+    }
+    .card-sect{
+        margin-top: -10vh;
+    }
+}
+ @keyframes Gradient {
+
+ }
+
+
+ .why-us-section {
+    background-color: #8072fc;
+}
+.why-us-section .img-container {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}

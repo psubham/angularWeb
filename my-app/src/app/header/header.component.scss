@@ -1,0 +1,71 @@
+@import "../../style/main.scss";
+
+.typewriter  {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15rem solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15rem; /* Adjust as needed */
+    animation: 
+      typing 10.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(223, 113, 10) }
+  }
+  
+  .heading-primary--sub {
+      max-width: fit-content;
+      margin-top: 2rem;
+  }
+  
+
+.header {
+    height: 85vh;
+    background-image:   url(/assets/cover.jpg)  ;
+    background-size: cover;
+    background-position: center;
+    position: center;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 85vh);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 85vh);
+        height: 95vh;
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 125em) {
+        background-image:  url(/assets/hero-img.png);
+    }
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 80vh);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 85vh);
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        @include respond(phone) {
+            top: 40%;
+            left: 50%;
+            transform: translate(-40%, -40%);
+        }
+    }
+
+}
+
+

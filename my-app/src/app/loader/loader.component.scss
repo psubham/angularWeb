@@ -1,0 +1,454 @@
+
+@import "../../style/main.scss";
+  
+
+.preloader {
+	animation: largePopOut $dur1 linear;
+	border-radius: 50%;
+	box-shadow:
+		0.15rem 0.15rem 0.15rem $shade4 inset,
+		-0.15rem -0.15rem 0.15rem $shade1 inset,
+		1rem 1rem 2rem $shade1, 
+		-1rem -1rem 2rem $shade4;
+    margin: auto;    
+	margin-bottom: 3rem;
+	position: relative;
+	width: 12rem;
+	height: 12rem;
+    top: 30vh;
+}
+.preloader__square {
+	animation: smallPopOut1 $dur1 linear, popInOut $dur2 $dur1 linear infinite;
+	border-radius: 0.5rem;
+	box-shadow:
+		0.15rem 0.15rem 0.15rem $shade4 inset,
+		-0.15rem -0.15rem 0.15rem $shade1 inset,
+		0.25rem 0.25rem 0.5rem $shade1,
+		-0.25rem -0.25rem 0.5rem $shade4;
+	position: absolute;
+	top: 2.5rem;
+	left: 2.5rem;
+	width: 3rem;
+	height: 3rem;
+}
+.preloader__square:nth-child(n + 2):nth-child(-n + 3) {
+	left: 6.5rem;
+}
+.preloader__square:nth-child(n + 3) {
+	top: 6.5rem;
+}
+.preloader__square:nth-child(2) {
+	animation: smallPopOut2 $dur1 linear, move2 $dur2 $dur1 linear infinite;
+}
+.preloader__square:nth-child(3) {
+	animation: smallPopOut3 $dur1 linear, move3 $dur2 $dur1 linear infinite;
+}
+.preloader__square:nth-child(4) {
+	animation: smallPopOut4 $dur1 linear, move4 $dur2 $dur1 linear infinite;
+}
+.status {
+	animation: fadeIn $dur1 linear forwards;
+	text-align: center;
+    
+	position: relative;
+    top: 30vh;
+}
+.status__dot {
+	animation: appear1 $dur1 $dur1 steps(1,start) infinite;
+	display: inline-block;
+}
+.status__dot:nth-child(2) {
+	animation: appear2 $dur1 $dur1 steps(1,start) infinite;
+}
+.status__dot:nth-child(3) {
+	animation: appear3 $dur1 $dur1 steps(1,start) infinite;
+}
+
+
+/* Animations */
+@keyframes largePopOut {
+	from, 20% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1, 
+			0 0 0 $shade4;
+	}
+	40% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			2rem 2rem 2rem $shade1, 
+			-2rem -2rem 4rem $shade4;
+	}
+	60%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			1rem 1rem 2rem $shade1, 
+			-1rem -1rem 2rem $shade4;
+	}
+}
+@keyframes smallPopOut1 {
+	from, 40% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1, 
+			0 0 0 $shade4;
+	}
+	60% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+	}
+	80%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+	}
+}
+
+@keyframes smallPopOut2 {
+	from, 45% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1, 
+			0 0 0 $shade4;
+	}
+	65% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+	}
+	85%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+	}
+}
+
+@keyframes smallPopOut3 {
+	from, 50% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1, 
+			0 0 0 $shade4;
+	}
+	70% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+	}
+	90%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+	}
+}
+
+@keyframes smallPopOut4 {
+	from, 55% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1, 
+			0 0 0 $shade4;
+	}
+	75% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+	}
+	95%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+	}
+}
+@keyframes popInOut {
+	from {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+		transform: translate(0,0);
+	}
+	4% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(0,0);
+	}
+	8% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(0,0);
+	}
+	12%, 16% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(4rem,0);
+	}
+	20% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(4rem,0);
+	}
+	24%, 25% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+		transform: translate(4rem,0);
+	}
+	29% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(4rem,0);
+	}
+	33% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(4rem,0);
+	}
+	37%, 41% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(4rem,4rem);
+	}
+	45% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(4rem,4rem);
+	}
+	49%, 50% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+		transform: translate(4rem,4rem);
+	}
+	54% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(4rem,4rem);
+	}
+	58% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(4rem,4rem);
+	}
+	62%, 66% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(0,4rem);
+	}
+	70% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(0,4rem);
+	}
+	74%, 75% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+		transform: translate(0,4rem);
+	}
+	79% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(0,4rem);
+	}
+	83% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(0,4rem);
+	}
+	87%, 91% {
+		box-shadow:
+			0 0 0 $shade4 inset,
+			0 0 0 $shade1 inset,
+			0 0 0 $shade1,
+			0 0 0 $shade4;
+		transform: translate(0,0);
+	}
+	95% {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.5rem 0.5rem 0.5rem $shade1,
+			-0.5rem -0.5rem 1rem $shade4;
+		transform: translate(0,0);
+	}
+	99%, to {
+		box-shadow:
+			0.15rem 0.15rem 0.15rem $shade4 inset,
+			-0.15rem -0.15rem 0.15rem $shade1 inset,
+			0.25rem 0.25rem 0.5rem $shade1,
+			-0.25rem -0.25rem 0.5rem $shade4;
+		transform: translate(0,0);
+	}
+}
+@keyframes move2 {
+	from, 8% {
+		transform: translate(0,0);
+		width: 3rem;
+		height: 3rem;
+	}
+	12% {
+		transform: translate(-4rem,0);
+		width: 7rem;
+		height: 3rem;
+	}
+	16%, 83% {
+		transform: translate(-4rem,0);
+		width: 3rem;
+		height: 3rem;
+	}
+	87% {
+		transform: translate(-4rem,0);
+		width: 3rem;
+		height: 7rem;
+	}
+	91%, to {
+		transform: translate(-4rem,4rem);
+		width: 3rem;
+		height: 3rem;
+	}
+}
+@keyframes move3 {
+	from, 33% {
+		transform: translate(0,0);
+		height: 3rem;
+	}
+	37% {
+		transform: translate(0,-4rem);
+		height: 7rem;
+	}
+	41%, to {
+		transform: translate(0,-4rem);
+		height: 3rem;
+	}
+}
+@keyframes move4 {
+	from, 58% {
+		transform: translate(0,0);
+		width: 3rem;
+	}
+	62% {
+		transform: translate(0,0);
+		width: 7rem;
+	}
+	66%, to {
+		transform: translate(4rem,0);
+		width: 3rem;
+	}
+}
+@keyframes fadeIn {
+	from, 67% {
+		opacity: 0;
+	}
+	83.3%, to {
+		opacity: 1;
+	}
+}
+@keyframes appear1 {
+	from {
+		visibility: hidden;
+	}
+	33%, to {
+		visibility: visible;
+	}
+}
+@keyframes appear2 {
+	from, 33% {
+		visibility: hidden;
+	}
+	67%, to {
+		visibility: visible;
+	}
+}
+@keyframes appear3 {
+	from, 67% {
+		visibility: hidden;
+	}
+	to {
+		visibility: visible;
+	}
+}
+
+/* Dark mode */
+@media (prefers-color-schreme: dark) {
+	:root {
+		$fg: #e3e4e8;
+		$shade1: #23252a;
+		$shade2: #3e424c;
+		$shade3: #4a4e5a;
+		$shade4: #686e7e;
+	}
+}

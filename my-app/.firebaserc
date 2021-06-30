@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "testangweb": {
+      "hosting": {
+        "my-app": [
+          "testangweb"
+        ]
+      }
+    }
+  }
+}

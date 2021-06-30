@@ -1,0 +1,12 @@
+
+<ng-container *ngIf="isloaded">
+    <app-navigation></app-navigation>
+    <app-header></app-header>
+    <app-about></app-about>
+    <app-footer></app-footer>
+</ng-container>
+
+
+<ng-container *ngIf="!isloaded">
+    <app-loader></app-loader>
+ </ng-container>
